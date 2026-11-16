@@ -1,0 +1,13 @@
+# per-replicate results (regenerate with R/run.R)
+results/*.rds
+results_lag30/
+results_log.txt
+# documents kept in the project Drive, not in the code repo
+*.docx
+~$*
+.Rhistory
+.RData
+.Rproj.user/
+.DS_Store
+Icon?
+results_placeholder_2026_11_12/
