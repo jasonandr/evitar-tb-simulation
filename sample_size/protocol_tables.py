@@ -52,8 +52,6 @@ if __name__ == "__main__":
           f"power at 0.656: {power(0.656):.4f}; at 0.65: {power(0.65):.4f}")
     print(f"events after day 30: placebo {ev(1):.1f}, HR0.656 {ev(0.656):.1f}, HR0.65 {ev(0.65):.1f}")
     print(f"total events both active HR0.65: {ev(1)+2*ev(0.65):.0f}; only combo effective: {2*ev(1)+ev(0.65):.0f}")
-    old = brentq(lambda h: power(h, alpha=0.035) - 0.8, 0.4, 0.95)
-    print(f"old design (B alone first, alpha 0.035) detectable with window: {1-old:.1%}")
     print("Table 20:")
     for red in (0.25, 0.30, 0.35, 0.40, 0.50):
         hr = round(1 - red, 2)

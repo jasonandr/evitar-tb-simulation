@@ -1,4 +1,4 @@
-# Scenario definitions (spec Section 5). Each entry: changes to default_par() and reps.
+# Scenario definitions (SAP Appendix A). Each entry: changes to default_par() and reps.
 sc <- function(reps, ...) list(reps = reps, mod = list(...))
 H <- 0.656
 SCENARIOS <- list(
@@ -13,7 +13,7 @@ SCENARIOS <- list(
   P2          = sc(1500, hr_bmms = 0.65, hr_b = 0.65),
   P3          = sc(1500, hr_bmms = 0.65, hr_b = 0.70),
   P4          = sc(1000, hr_bmms = 0.70, hr_b = 0.75),
-  # cell blocks of ~30 (Daniel's REDCap test, 285 blocks), Nov 14
+  # cell blocks of ~30 (285 blocks)
   N1_b30      = sc(3000, hr_bmms = 1, hr_b = 1, block_size = 30),
   N1_sd05_b30 = sc(2000, hr_bmms = 1, hr_b = 1, block_sd = 0.5, block_size = 30),
   P1_b30      = sc(2000, hr_bmms = H, hr_b = H, block_size = 30),

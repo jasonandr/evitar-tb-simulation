@@ -6,6 +6,6 @@
 - the 0.5%-step quantiles of the baseline Lunit INSIGHT CXR (v3.1.5.1) score, separately for participants with and without previous TB;
 - the coefficients of a Cox model for incident TB with a natural cubic spline of the Lunit score, its interaction with previous TB, and previous TB itself. The spline has knots at 6.65, 27.68, 49.48 and 92.63, the same knots as the manuscript.
 
-The summaries were produced from `derived_private/analysis_cohort.rds` in the TB-R01-Brazil analysis repository. They are used when `cov_model = "cohort"` (scenarios ending in `_c`). BMI uses an HR of 1.21 per kg/m² decrease, the cohort estimate cited in the protocol.
+The summaries were produced from the cohort's analysis dataset, which is not public. They are used when `cov_model = "cohort"`, the default in `R/dgm.R`. BMI uses an HR of 1.21 per kg/m² decrease, the cohort estimate cited in the protocol.
 
-The cohort manuscript is under peer review; cite it here once it is published or preprinted. The investigators have approved public release of these aggregate summaries.
+The investigators have approved public release of these aggregate summaries.

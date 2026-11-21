@@ -11,3 +11,5 @@ results_log.txt
 .DS_Store
 Icon?
 results_placeholder_2026_11_12/
+# exploratory, not part of the public analysis
+R/check_attenuation.R

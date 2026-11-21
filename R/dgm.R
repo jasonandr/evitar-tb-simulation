@@ -1,5 +1,5 @@
 # EVITAR-TB trial-level simulation: data-generating mechanism.
-# Follows EVITAR-TB_Simulation_Spec_2026_11_12.docx. Values flagged PLACEHOLDER
+# Follows the simulation specification (SAP Appendix A). Values flagged PLACEHOLDER
 # stand in for site/cohort data not yet available.
 
 DAY_YR  <- 365.25
@@ -22,7 +22,7 @@ default_par <- function() list(
   b_bmi      = -log(1.21),    # log HR per kg/m2 (HR 1.21 per kg/m2 decrease; TB R01 cohort)
   b_lunit    = 0.15,          # log HR per 10 Lunit points; PLACEHOLDER
   b_prevtb   = log(2),        # PLACEHOLDER
-  cov_model  = "cohort",      # Lunit and previous TB from the TB R01 cohort; "placeholder": b_lunit, b_prevtb below
+  cov_model  = "cohort",      # Lunit and previous TB from the TB R01 cohort; "placeholder": b_lunit, b_prevtb above
   hr_bmms    = 0.656,
   hr_b       = 0.656,
   effect     = "constant",

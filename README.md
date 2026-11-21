@@ -30,14 +30,13 @@ Baseline TB risk follows the TB R01 prison cohort (Lunit score and previous TB d
 | `R/run.R` | Runs scenarios in parallel; writes `results/<scenario>.rds` |
 | `R/summarize.R` | Performance measures; writes `results/summary.csv` |
 | `R/test_one.R` | Single-trial check, including validation of the CR2 implementation against `clubSandwich` |
-| `R/check_attenuation.R` | Exploratory large-sample check of HR attenuation (inconclusive; not used in the report) |
-| `sample_size/protocol_tables_with_window_2026_10_31.py` | Closed-form sample size and power calculations in the protocol and SAP (functions p_obs, power, n_needed, sim, ev; Python 3 with NumPy and SciPy) |
+| `sample_size/protocol_tables.py` | Closed-form sample size and power calculations in the protocol and SAP, with the 30-day window period (Python 3 with NumPy and SciPy) |
 | `inputs/cohort_covariates.rds` | Aggregate summaries of the TB R01 prison cohort used by all scenarios (see inputs/README.md) |
 | `results/summary.csv` | Summary of all scenarios (per-replicate `.rds` files are not tracked) |
 
 ## Running
 
-Sample size tables: `python3 sample_size/protocol_tables_with_window_2026_10_31.py`.
+Sample size tables: `python3 sample_size/protocol_tables.py`.
 
 Simulation:
 
@@ -50,3 +49,7 @@ Rscript summarize.R
 ```
 
 `run.R` uses the L'Ecuyer-CMRG generator with a seed derived from each scenario name. It uses all cores but one and skips scenarios whose results file already exists. The full set takes about 3.5 hours on 9 cores.
+
+## Author and license
+
+Jason Andrews, Stanford University. Code released under the MIT License (see `LICENSE`).
